@@ -48,6 +48,7 @@ echo "====> Create users"
 
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+echo ${DIR}
 
 while read fullname; do
   NAME=( $(IFS=" " echo "${fullname}") )
@@ -58,7 +59,7 @@ while read fullname; do
   echo $ADD_USER | jq
   USER_ID=`echo $ADD_USER | jq .id`
   [[ "$USER_ID" != "null" ]] && IDS+=("${USER_ID}")
-done <$DIR/names-15.txt
+done <"$DIR"/names-15.txt
 
 while read id; do
   echo ${id} | jq .;

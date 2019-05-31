@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: hyperskale/friend-service
+  repository: dockerboostman/friend-service
   tag: 0.0.2-SNAPSHOT
   pullPolicy: Always
 
@@ -33,7 +33,7 @@ resources: {}
   #  memory: 128Mi
   # requests:
   #  cpu: 100m
-  #  memory: 128Mi
+#  memory: 128Mi
 
 nodeSelector: {}
 
